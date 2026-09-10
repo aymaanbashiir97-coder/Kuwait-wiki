@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>معلومات عن دولة الكويت</title>
+
+    <style>
+
+        /* =========================
+           الإعدادات الأساسية
+        ========================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+            background: linear-gradient(135deg, #e8f5e9, #d7ccc8);
+            color: #263238;
+            line-height: 1.8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+           العناوين
+        ========================== */
+
+        .main-title {
+            text-align: center;
+            background: linear-gradient(90deg, #006c35, #009c4b);
+            color: white;
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 5px 12px rgba(0, 108, 53, 0.3);
+        }
+
+        .sub-title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #006c35;
+            border-right: 6px solid #ce1126;
+            padding-right: 12px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           الفقرة التعريفية
+        ========================== */
+
+        .description {
+            background-color: #f5f5f5;
+            border-right: 6px solid #006c35;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: justify;
+        }
+
+
+        /* =========================
+           الصور والروابط
+        ========================== */
+
+        .media-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 25px 0;
+        }
+
+        .media-section img {
+            width: 150px;
+            height: 95px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #006c35;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .media-section img:hover {
+            transform: scale(1.08);
+        }
+
+        .link-button {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #ce1126;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .link-button:hover {
+            background-color: #006c35;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           الروابط
+        ========================== */
+
+        .links {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .links a {
+            display: inline-block;
+            margin: 8px;
+            padding: 10px 18px;
+            text-decoration: none;
+            color: white;
+            background-color: #333;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .links a:hover {
+            background-color: #006c35;
+        }
+
+
+        /* =========================
+           الجداول
+        ========================== */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        th,
+        td {
+            padding: 14px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #006c35;
+            color: white;
+            font-size: 17px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+
+        tr:hover {
+            background-color: #e8f5e9;
+        }
+
+
+        /* =========================
+           الفاصل
+        ========================== */
+
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #ddd;
+            margin: 30px 0;
+        }
+
+
+        /* =========================
+           الاستمارة
+        ========================== */
+
+        form {
+            background-color: #f7f7f7;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+        }
+
+        form label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 7px;
+            margin-bottom: 15px;
+            border: 1px solid #bbb;
+            border-radius: 7px;
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus,
+        select:focus {
+            border-color: #006c35;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0,108,53,0.3);
+        }
+
+        .radio-group {
+            margin: 10px 0 20px;
+        }
+
+        .radio-group label {
+            display: inline;
+            font-weight: normal;
+            margin-left: 15px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background-color: #006c35;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ce1126;
+        }
+
+
+        /* =========================
+           التذييل
+        ========================== */
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #263238;
+            color: white;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <!-- =========================
+         العناوين الرئيسية
+    ========================== -->
+
+    <h1 class="main-title">
+        My name is Ayman Bashir saeed
+    </h1>
+
+    <h1 class="sub-title">
+        Karary University
+    </h1>
+
+    <h1 class="sub-title">
+        Kuwait 🇰🇼
+    </h1>
+
+
+    <!-- =========================
+         نبذة عن الكويت
+    ========================== -->
+
+    <h2>نبذة عن دولة الكويت</h2>
+
+    <div class="description">
+
+        دولة الكويت 🇰🇼 هي دولة عربية تقع في منطقة الخليج العربي
+        في شمال غرب الخليج. عاصمتها مدينة الكويت، وهي من أهم
+        المدن في المنطقة.
+
+        تتميز الكويت بتاريخها وثقافتها العربية والخليجية،
+        كما تشتهر باقتصادها القائم بشكل كبير على النفط.
+
+        وتعتبر الكويت من الدول ذات المساحة الصغيرة نسبياً،
+        ولكنها تمتلك أهمية اقتصادية وسياسية كبيرة في منطقة الخليج.
+
+        ومن أشهر معالم الكويت أبراج الكويت، وبرج التحرير،
+        والمسجد الكبير، بالإضافة إلى العديد من الأماكن
+        السياحية والثقافية.
+
+        اللغة الرسمية في الكويت هي اللغة العربية،
+        والعملة الرسمية هي الدينار الكويتي.
+
+    </div>
+
+
+    <!-- =========================
+         الصور
+    ========================== -->
+
+    <h2>صور دولة الكويت</h2>
+
+    <div class="media-section">
+
+        <!-- علم الكويت -->
+        <a href="https://ar.wikipedia.org/wiki/علم_الكويت" target="_blank">
+
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_Kuwait.svg"
+                alt="علم الكويت">
+
+        </a>
+
+
+        <!-- صورة أبراج الكويت -->
+        <a href="https://ar.wikipedia.org/wiki/أبراج_الكويت" target="_blank">
+
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Kuwait_Towers.jpg"
+                alt="أبراج الكويت">
+
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         روابط ويكيبيديا
+    ========================== -->
+
+    <h2>روابط مهمة عن الكويت</h2>
+
+    <div class="links">
+
+        <a
+            href="https://ar.wikipedia.org/wiki/الكويت"
+            target="_blank">
+            ويكيبيديا - دولة الكويت
+        </a>
+
+        <a
+            href="https://ar.wikipedia.org/wiki/علم_الكويت"
+            target="_blank">
+            ويكيبيديا - علم الكويت
+        </a>
+
+        <a
+            href="https://ar.wikipedia.org/wiki/مدينة_الكويت"
+            target="_blank">
+            ويكيبيديا - مدينة الكويت
+        </a>
+
+        <a
+            href="https://ar.wikipedia.org/wiki/أبراج_الكويت"
+            target="_blank">
+            ويكيبيديا - أبراج الكويت
+        </a>
+
+    </div>
+
+
+    <hr>
+
+
+    <!-- =========================
+         جدول الأشخاص
+    ========================== -->
+
+    <h2>جدول بيانات الأشخاص</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Full Name</th>
+                <th>Age</th>
+                <th>City in Kuwait</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>Ahmed</td>
+                <td>23</td>
+                <td>Kuwait City</td>
+            </tr>
+
+            <tr>
+                <td>Mohammed</td>
+                <td>24</td>
+                <td>Hawally</td>
+            </tr>
+
+            <tr>
+                <td>Ali</td>
+                <td>22</td>
+                <td>Salmiya</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+
+    <hr>
+
+
+    <!-- =========================
+         معلومات الكويت
+    ========================== -->
+
+    <h2>جدول معلومات دولة الكويت</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>المعلومة</th>
+                <th>التفاصيل</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>اسم الدولة</td>
+                <td>دولة الكويت</td>
+            </tr>
+
+            <tr>
+                <td>العاصمة</td>
+                <td>مدينة الكويت</td>
+            </tr>
+
+            <tr>
+                <td>اللغة الرسمية</td>
+                <td>العربية</td>
+            </tr>
+
+            <tr>
+                <td>العملة</td>
+                <td>الدينار الكويتي (KWD)</td>
+            </tr>
+
+            <tr>
+                <td>الموقع</td>
+                <td>الخليج العربي</td>
+            </tr>
+
+            <tr>
+                <td>القارة</td>
+                <td>آسيا</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+
+    <hr>
+
+
+    <!-- =========================
+         الاستمارة
+    ========================== -->
+
+    <h2>استمارة البيانات</h2>
+
+    <form action="#" method="post">
+
+        <label for="fullname">
+            الاسم الكامل:
+        </label>
+
+        <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="أدخل اسمك هنا">
+
+
+        <label>
+            هل زرت الكويت من قبل؟
+        </label>
+
+        <div class="radio-group">
+
+            <input
+                type="radio"
+                id="yes"
+                name="visited"
+                value="yes">
+
+            <label for="yes">
+                نعم
+            </label>
+
+
+            <input
+                type="radio"
+                id="no"
+                name="visited"
+                value="no"
+                checked>
+
+            <label for="no">
+                لا
+            </label>
+
+        </div>
+
+
+        <label for="month">
+            اختر شهر السفر المفضّل:
+        </label>
+
+        <select id="month" name="travel_month">
+
+            <option value="1">يناير</option>
+            <option value="2">فبراير</option>
+            <option value="3">مارس</option>
+            <option value="4">أبريل</option>
+            <option value="5">مايو</option>
+            <option value="6">يونيو</option>
+            <option value="7">يوليو</option>
+            <option value="8">أغسطس</option>
+            <option value="9">سبتمبر</option>
+            <option value="10">أكتوبر</option>
+            <option value="11">نوفمبر</option>
+            <option value="12">ديسمبر</option>
+
+        </select>
+
+
+        <input
+            type="submit"
+            value="إرسال البيانات">
+
+    </form>
+
+
+    <!-- =========================
+         نهاية الصفحة
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 - مشروع HTML & CSS عن دولة الكويت 🇰🇼
+        </p>
+
+        <p>
+            Karary University
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
